@@ -1,0 +1,93 @@
+/*
+Create a page having 4 buttons and the following functions
+
+1. Button 1 to change color of div
+2. Button 2 to change size of div
+3. Button 3 to add a image in div
+4. Button 4 to remove a image from div
+
+*/
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		button {
+			background-color: #5035FF;
+			border: 0px solid transparent;
+			padding: 0.5rem 2rem;
+			color: white;
+			border-radius: 0.5rem;
+			font-style: bold;
+			font-family: karla;
+			font-size: 1.1rem;
+		}
+
+		button:focus {
+		    outline: none;
+		}
+
+		button:active {
+		    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+		}
+
+		.main-div {
+			width: 50rem;
+			height: 30rem;
+			padding: 2rem;
+			align-self: center;
+			margin: auto; 
+			text-align: center;
+		}
+
+		.all-btns {
+			display: flex;
+			margin: auto;
+			justify-content: center;
+			align-self: center;
+			align-content: center;
+		}
+
+		.all-btns > button {
+			margin: 2rem;
+		}
+	</style>
+	<script type="text/javascript">
+		function changeSize() {
+			document.getElementById('main-div').style.fontSize = '2rem'
+			//document.getElementById('main-div').innerHTML = 
+		}
+		
+		function changeColor() {
+			document.getElementById('main-div').style.backgroundColor = 'lightgreen'
+		}
+
+		function putImage() {
+			document.getElementById("main-div").style.backgroundImage = "url('lets-img.png')";
+		}
+		
+		function removeImage() {
+			document.getElementById("main-div").style.backgroundImage = "";
+		}
+	</script>
+</head>
+<body>
+
+	<div id="main-div" class="main-div">
+		Hello I am Om Patil !
+	</div>
+	<div class="all-btns">
+		<button id="btn-1" onclick="changeSize()"> Size</button>
+		<button id="btn-2" onclick="changeColor()"> Color</button>
+		<button id="btn-3" onclick="putImage()"> Put Image</button>
+		<button id="btn-4" onclick="removeImage()"> Remove Image</button>
+	<div>
+
+</body>
+
+</html>
+
+
